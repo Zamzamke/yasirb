@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Yasir</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://source.unsplash.com/1600x900/?celebration,birthday') no-repeat center center/cover;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .message {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 4em;
+            background: linear-gradient(45deg, #ff6347, #FFD700, #00CED1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colorFade 5s infinite;
+        }
+        p {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 20px;
+            animation: fadeUp 2s ease-in-out;
+        }
+        .share-button {
+            margin-top: 30px;
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .share-button:hover {
+            background-color: #e55540;
+        }
+        /* Confetti Animation */
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.7);
+            animation: fall 5s infinite ease-in-out;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-150vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(150vh) rotate(360deg); opacity: 0; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes colorFade {
+            0%, 100% { color: #ff6347; }
+            50% { color: #FFD700; }
+        }
+        @keyframes fadeUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Confetti animation container -->
+    <div class="confetti">
+        <!-- Generate multiple confetti pieces -->
+        <div class="confetti-piece" style="left: 10%; background-color: #FF69B4;"></div>
+        <div class="confetti-piece" style="left: 20%; background-color: #FFD700;"></div>
+        <div class="confetti-piece" style="left: 30%; background-color: #ADFF2F;"></div>
+        <div class="confetti-piece" style="left: 40%; background-color: #00CED1;"></div>
+        <div class="confetti-piece" style="left: 50%; background-color: #FF4500;"></div>
+        <div class="confetti-piece" style="left: 60%; background-color: #1E90FF;"></div>
+        <div class="confetti-piece" style="left: 70%; background-color: #32CD32;"></div>
+        <div class="confetti-piece" style="left: 80%; background-color: #FF6347;"></div>
+    </div>
+
+    <!-- Birthday Message -->
+    <div class="message">
+        <h1>Happy Birthday, Yasir! 🎉</h1>
+        <p>May your day be filled with love, laughter, and unforgettable memories!</p>
+        <p>Here’s to another year of amazing moments and success! 💖</p>
+        <!-- Share button -->
+        <button class="share-button" onclick="window.location.href='https://www.whatsapp.com';">Share the love! ❤️</button>
+    </div>
+
+</body>
+</html>
